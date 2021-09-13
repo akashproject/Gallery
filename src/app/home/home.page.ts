@@ -97,5 +97,9 @@ export class HomePage {
       console.log('no');
     }
   }
+
+  removeElement(params) {
+    this.images.splice(params, 1);
+  }
   
 }

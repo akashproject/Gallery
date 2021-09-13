@@ -17,7 +17,10 @@
     <ion-button  (click)="openLink()" >Upload photo</ion-button>
     <ion-grid>
       <ion-row>
-        <ion-col *ngFor="let image of images" size="3">
+        <ion-col *ngFor="let image of images; let i = index" size="3">
+          <button type="button" class="btn custom all" (click)="removeElement(i)">
+            Delete
+          </button>
           <img src="{{image}}" alt="" >
         </ion-col>
       </ion-row>
