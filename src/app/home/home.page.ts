@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CameraPermissionType, Camera, CameraResultType, CameraSource, ImageOptions } from '@capacitor/camera';
 import { ActionSheetController, ToastController } from '@ionic/angular';
 import { SigninService } from 'src/app/services/signin.service';
+import { defineCustomElements } from '@ionic/pwa-elements/loader'
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
