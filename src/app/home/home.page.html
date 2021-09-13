@@ -14,9 +14,13 @@
   </ion-header>
 
   <div id="container">
-    <ion-button color="custom" fill="clear" (click)="openLink()">
-      Upload photo
-    </ion-button>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button  (click)="openLink()" >Upload photo</ion-button>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let image of images" size="3">
+          <img src="{{image}}" alt="" >
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
 </ion-content>

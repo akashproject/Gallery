@@ -9,7 +9,7 @@ import { SigninService } from 'src/app/services/signin.service';
 })
 export class HomePage {
   uploadStatus = false;
-  backgroundImage : any = '';
+  images : any = [];
   constructor(private actionSheetController: ActionSheetController,private signinService: SigninService,) {}
 
   async openLink() {
@@ -83,9 +83,9 @@ export class HomePage {
 
   add_photo(dataUrl) {
     if (dataUrl) {
-      //this.spinner.show();
+      this.images.push(dataUrl);
       this.signinService.uploadPhofilephoto(dataUrl).subscribe((data: any) => {
-        this.backgroundImage = data;
+        this.images.push(data);
         //this.spinner.hide();
         if (data && data.status === 200 && data.data) {
           //this.logo = data.data;
