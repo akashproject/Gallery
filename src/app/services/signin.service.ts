@@ -25,8 +25,7 @@ export class SigninService {
 
 
   uploadPhofilephoto(param: any){
-    
-    return this.http.post(`${environment.apiUrl}/upload-profile-photo`, {file : param});
+    return this.http.post(`${environment.apiUrl}/upload-image`, {file : param});
   }
   
 }
